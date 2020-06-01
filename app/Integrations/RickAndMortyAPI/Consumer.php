@@ -24,6 +24,7 @@ class Consumer
 				$done = true;
 			}
 			$current_page++;
+			sleep(config('rick_and_morty_api.seconds_between_api_pulls'));
 		}
 		return $all;
 	}
