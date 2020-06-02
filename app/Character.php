@@ -13,21 +13,21 @@ class Character extends Model
 
     public function origin()
     {
-    	$this->belongsTo(Location::class,'origin_id');
+    	return $this->belongsTo(Location::class,'origin_id');
     }
 
     public function appearances()
     {
-    	$this->hasMany(Appearance::class);
+    	return $this->hasMany(Appearance::class);
     }
 
     public function episodes()
     {
-    	$this->belongsToMany(Episode::class,'appearances');
+    	return $this->belongsToMany(Episode::class,'appearances');
     }
 
     public function location()
     {
-    	$this->belongsTo(Location::class);
+    	return $this->belongsTo(Location::class);
     }
 }

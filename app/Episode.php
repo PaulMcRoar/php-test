@@ -13,12 +13,12 @@ class Episode extends Model
 
     public function appearances()
     {
-    	$this->hasMany(Appearance::class);
+    	return $this->hasMany(Appearance::class);
     }
 
     public function characters()
     {
-    	$this->belongsToMany(Character::class,'appearances');
+    	return $this->belongsToMany(Character::class,'appearances');
     }
     
 }

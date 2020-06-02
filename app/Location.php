@@ -14,11 +14,11 @@ class Location extends Model
 
     public function residents()
     {
-    	$this->hasMany(Character::class);
+    	return $this->hasMany(Character::class);
     }
 
     public function characters_for_which_this_is_the_original_location()
     {
-    	$this->hasMany(Character::class,'origin_id');
+    	return $this->hasMany(Character::class,'origin_id');
     }
 }
