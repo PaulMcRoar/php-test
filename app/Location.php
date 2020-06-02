@@ -3,10 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
+
 
 class Location extends Model
 {
-    //
+    use Searchable;
+
     public $incrementing = false;
 
     protected $fillable = ['name','type','dimension','url','created'];

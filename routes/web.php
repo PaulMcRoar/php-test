@@ -56,3 +56,13 @@ Route::group(
          ->where('id', '[0-9]+');
 
 });
+
+Route::group(
+[
+    'prefix' => 'search',
+], function () {
+
+    Route::get('/', 'SearchController@search')
+         ->name('search');
+
+});
