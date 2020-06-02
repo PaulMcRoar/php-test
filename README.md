@@ -1,5 +1,28 @@
 # totallywicked/rick-and-morty
 
+## Notes
+
+This was built using the Laravel MVC platform which I believe you are familiar with.
+
+Due to the rate-limiting of the API, and the data being pretty much static, 
+and other benefits such as availability if the site goes down, I took the decision
+to sync the R+M data into a local database. The .env.example has the example of a sqlite
+database, and you would need to amend your .env to fit.
+
+Once the migrations have ran you should run
+
+php artisan refresh:local
+
+to pull down the R+M data into the local database. This is also scheduled to run overnight.
+This will sync changes and deletions.
+
+
+
+
+
+
+
+
 **This project will be based primarily on your ability to fulfill the task 
 requirements. Any potential design skills are a bonus, but usability, 
 performance and security will be taken into account.**
